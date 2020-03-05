@@ -24,9 +24,9 @@
             <input type="submit" value="Se oversigt over kunder">
         </form>
 
-        <h2>Her kan du oprette en ny kunde</h2>
-        <form action="FrontController" method="POST">
-            <input type="hidden" name="taget" placeholder="newemployee">
+        <h2>Her kan du oprette en ny medarbejder</h2>
+        <form name="register" action="FrontController" method="POST">
+            <input type="hidden" name="taget" value="newemployee">
             Email:<br>
             <input type="text" name="email" placeholder="someone@nowhere.com">
             <br>
@@ -36,7 +36,7 @@
             Retype Password:<br>
             <input type="password" name="password2" placeholder="sesam">
             <br>
-            <input type="submit" value="Opret kunde">
+            <input type="submit" value="Opret medarbejder">
         </form>
 
     </body>

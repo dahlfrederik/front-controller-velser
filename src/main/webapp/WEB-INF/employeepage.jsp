@@ -25,7 +25,7 @@
         </form>
 
         <h2>Her kan du oprette en ny medarbejder</h2>
-        <form name="register" action="FrontController" method="POST">
+        <form action="FrontController" method="POST">
             <input type="hidden" name="taget" value="newemployee">
             Email:<br>
             <input type="text" name="email" placeholder="someone@nowhere.com">

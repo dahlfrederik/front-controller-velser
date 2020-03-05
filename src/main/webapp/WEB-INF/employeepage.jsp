@@ -16,8 +16,28 @@
 
         <h1>Hello ${sessionScope.email} </h1>
 
-
-
         You are now logged in as a EMPLOYEE of our wonderful site.
+
+        <h2> TRYK PÅ KNAPPEN FOR EN OVERSIGT OVER ALLE KUNDER </h2>
+        <form action="FrontController" method="post">
+            <input type="hidden" name="taget" value="customerlist">
+            <input type="submit" value="Se oversigt over kunder">
+        </form>
+
+        <h2>Her kan du oprette en ny kunde</h2>
+        <form action="FrontController" method="POST">
+            <input type="hidden" name="taget" placeholder="newemployee">
+            Email:<br>
+            <input type="text" name="email" placeholder="someone@nowhere.com">
+            <br>
+            Password:<br>
+            <input type="password" name="password1" placeholder="sesam">
+            <br>
+            Retype Password:<br>
+            <input type="password" name="password2" placeholder="sesam">
+            <br>
+            <input type="submit" value="Opret kunde">
+        </form>
+
     </body>
 </html>

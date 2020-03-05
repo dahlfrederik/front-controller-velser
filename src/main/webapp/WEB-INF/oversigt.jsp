@@ -41,6 +41,10 @@
     <input type="submit" value="Ændre kundens kode">
 </form>
 
-
+<h2>LOGOUT</h2>
+<form action="FrontController" method="POST">
+    <input type="hidden" name="taget" value="logout">
+    <input type="submit" value="Logout">
+</form>
 </body>
 </html>

@@ -80,7 +80,7 @@ public class UserMapper {
         return customerList;
     }
 
-    public static void RemoveCustomer(String email){
+    public static void removeCustomer(String email){
         try {
             String SQL = "DELETE FROM Users WHERE email = (?)";
             Connection con = Connector.connection();

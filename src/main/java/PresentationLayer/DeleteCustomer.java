@@ -9,7 +9,7 @@ import javax.servlet.http.HttpSession;
 public class DeleteCustomer extends Command {
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException {
-        LogicFacade.RemoveCustomer(request.getParameter("remove"));
+        LogicFacade.removeCustomer(request.getParameter("remove"));
         HttpSession session = request.getSession();
         session.getAttribute("email");
         new CustomerList().execute(request,response);

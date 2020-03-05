@@ -1,17 +1,16 @@
 package PresentationLayer;
 
-import FunctionLayer.LogicFacade;
 import FunctionLayer.LoginSampleException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-public class EditPassword extends Command {
+public class Logout extends Command {
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException {
-        LogicFacade.editPassword(request.getParameter("email"),request.getParameter("password"));
-        new CustomerList().execute(request,response);
-
-        return "oversigt";
+        HttpSession session = request.getSession();
+        session.invalidate();
+        return "../index";
     }
 }

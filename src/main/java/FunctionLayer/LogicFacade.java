@@ -27,8 +27,8 @@ public class LogicFacade {
         return user;
     }
 
-    public static void RemoveCustomer(String email){
-        UserMapper.RemoveCustomer(email);
+    public static void removeCustomer(String email){
+        UserMapper.removeCustomer(email);
     }
 
     public static void editPassword(String email, String password){

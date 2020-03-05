@@ -16,10 +16,14 @@
 
         <h1>Hello ${sessionScope.email} </h1>
 
+        <h2>You are now logged in as a customer of our wonderful site.</h2>
 
+        <h3>Den her side kan ikke rigtig noget, men den er næsten flot</h3>
 
-
-
-        You are now logged in as a customer of our wonderful site.
+        <h2>LOGOUT</h2>
+        <form action="FrontController" method="POST">
+            <input type="hidden" name="taget" value="logout">
+            <input type="submit" value="Logout">
+        </form>
     </body>
 </html>

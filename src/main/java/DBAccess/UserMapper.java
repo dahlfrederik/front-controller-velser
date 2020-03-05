@@ -96,7 +96,7 @@ public class UserMapper {
 
     public static void updatePassword(String email, String password){
         try {
-            String SQL = "UPDATE users SET password=(?) WHERE email=(?)  ";
+            String SQL = "UPDATE users SET password=(?) WHERE email=(?) and role='customer'";
             Connection con = Connector.connection();
             PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1,password);
@@ -105,7 +105,7 @@ public class UserMapper {
             ps.close();
 
         } catch (SQLException | ClassNotFoundException ex) {
-            System.out.println("FEJL! Kunne ikke slette kunde.");
+            System.out.println("FEJL! Kunne ikke ændre kundes password.");
         }
     }
 
